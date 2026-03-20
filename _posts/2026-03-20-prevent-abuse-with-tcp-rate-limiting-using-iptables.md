@@ -19,17 +19,17 @@ I have been really tired lately. I did some research on adding a per-IP rate lim
 
 The complete command is as follows:
 
-```Shell
-$  iptables  --new-chain SOCAT-RATE-LIMIT
-$  iptables  --append SOCAT-RATE-LIMIT \
+```bash
+iptables  --new-chain SOCAT-RATE-LIMIT
+iptables  --append SOCAT-RATE-LIMIT \
 --match hashlimit \
 --hashlimit-mode srcip  \
 --hashlimit-upto  50/sec  \
 --hashlimit-burst  100  \
 --hashlimit-name conn_rate_limit \
 --jump ACCEPT
-$  iptables  --append SOCAT-RATE-LIMIT  --jump DROP
-$  iptables  -I  INPUT  -p  tcp  --dport  1234  --jump SOCAT-RATE-LIMIT
+iptables  --append SOCAT-RATE-LIMIT  --jump DROP
+iptables  -I  INPUT  -p  tcp  --dport  1234  --jump SOCAT-RATE-LIMIT
 ```
 - The first line creates a new iptables chain and sets a rate limit;
 - The second line processes the packet; if it's within the rate limit, accept the packet; otherwise, skip to the third line and drop the packet.
