@@ -23,10 +23,10 @@ description: A blog about Unix Systems, infrastructure, and practical problem so
 url: https://umair-khurshid.github.io
 
 github:
-  username: github_username # change to your GitHub username
+  username: Umair-khurshid # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
+# twitter:
+  username:  # change to your Twitter username
 
 social:
   name: Umair Khurshid
@@ -46,7 +46,7 @@ analytics:
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
-    id: # fill in your Umami ID
+    id: d5ffaead-f05a-4d91-9373-4e0a227b73db # fill in your Umami ID
     domain: # fill in your Umami domain
   matomo:
     id: # fill in your Matomo ID
