@@ -15,8 +15,20 @@ permalink: /sitemap.xml
   </url>
   {% endfor %}
 
+  {% for tab in site.tabs %}
+    {% if tab.sitemap != false and tab.layout and tab.layout != null %}
+  <url>
+    <loc>{{ site.url }}{{ tab.url }}</loc>
+    {% if tab.last_modified_at %}
+    <lastmod>{{ tab.last_modified_at | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+    {% endif %}
+  {% endfor %}
+
   {% for page in site.pages %}
-    {% if page.layout and page.layout != null %}
     {% unless page.url contains "/tags" 
 	  or page.url contains "/categories/" 
   	 or page.url contains "/archives"
@@ -27,7 +39,11 @@ permalink: /sitemap.xml
         or page.url contains ".js"
         or page.url contains ".css"
         or page.url contains "404"
-        or page.url contains "google" %}
+        or page.url contains "google"
+        or page.url contains "/redirects"
+        or page.url contains "/app.min"
+        or page.url contains "/sw.min"
+        or page.url contains ".txt" %}
   <url>
     <loc>{{ site.url }}{{ page.url }}</loc>
     {% if page.last_modified_at %}
@@ -42,7 +58,6 @@ permalink: /sitemap.xml
     {% endif %}
   </url>
     {% endunless %}
-    {% endif %}
   {% endfor %}
 
 </urlset>
