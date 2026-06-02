@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://umair-khurshid.github.io/</loc>
+         <lastmod>2026-06-02</lastmod>
+    </url>
+    <url>
+         <loc>https://umair-khurshid.github.io/about/</loc>
+         <lastmod>2026-06-02</lastmod>
+    </url>
+    <url>
+         <loc>https://umair-khurshid.github.io/tags/</loc>
+         <lastmod>2026-06-02</lastmod>
+    </url>
+    <url>
+         <loc>https://umair-khurshid.github.io/posts/prevent-abuse-with-tcp-rate-limiting-using-iptables/</loc>
+         <lastmod>2026-06-02</lastmod>
+    </url>
+    <url>
+         <loc>https://umair-khurshid.github.io/posts/tcp-bbr-setup-guide/</loc>
+         <lastmod>2026-06-02</lastmod>
+    </url>
+</urlset>
