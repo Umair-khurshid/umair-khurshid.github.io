@@ -1,0 +1,75 @@
+site_name: Umair Khurshid
+site_description: A blog about Unix Systems, infrastructure, networking, and practical problem solving.
+site_url: https://umair-khurshid.github.io
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.follow
+    - search.highlight
+    - search.share
+    - navigation.top
+  icon:
+    repo: fontawesome/brands/github
+
+repo_url: https://github.com/Umair-khurshid/umair-khurshid.github.io
+repo_name: Umair-khurshid/umair-khurshid.github.io
+edit_uri: ""
+
+plugins:
+  - search
+
+extra:
+  generator: false
+
+copyright: Copyright &copy; 2026 Umair Khurshid
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - meta
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/extra.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Posts:
+      - TCP BBR Setup Guide: posts/tcp-bbr-setup-guide.md
+      - Prevent Abuse with TCP Rate Limiting: posts/prevent-abuse-with-tcp-rate-limiting-using-iptables.md
+  - Tags: tags.md
+  - About: about.md

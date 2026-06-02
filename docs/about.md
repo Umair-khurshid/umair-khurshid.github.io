@@ -1,7 +1,9 @@
 ---
-title: About
-icon: fas fa-info-circle
-order: 4
+hide:
+  - toc
+  - navigation
 ---
+
+# About
 
 A blog about Unix systems, infrastructure, networking, and practical problem solving.

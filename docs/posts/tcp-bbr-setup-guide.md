@@ -1,16 +1,14 @@
 ---
-layout: post
-title: "TCP BBR Setup Guide: Optimize Linux, Windows, and FreeBSD Networking"
 date: 2026-03-16
-categories: [networking]
-tags: [linux, freebsd]
-toc: true
-
-image:
-  path: /assets/img/posts/cover.png
-  alt: "TCP BBR congestion control diagram"
- 
+tags:
+  - linux
+  - freebsd
 ---
+
+# TCP BBR Setup Guide: Optimize Linux, Windows, and FreeBSD Networking
+
+![TCP BBR congestion control diagram](../assets/img/posts/cover.png)
+
 If you spend any time tuning networks or moving large amounts of data across the internet, you eventually run into TCP congestion control. This is the part of the networking stack responsible for deciding how fast data should be sent without overwhelming the network.
 
 For decades, most TCP algorithms relied on a simple signal called  packet loss. When packets start dropping, the sender assumes congestion and slows down. This works, but it is reactive. The sender only realizes something is wrong after the network has already become congested.
@@ -28,7 +26,7 @@ At a high level, BBR continuously measures two properties of a network path:
     
 With these two measurements, the sender can estimate how much data the network can safely carry.
 
-Traditional algorithms push data until packets drop. BBR instead tries to operate close to the network’s natural capacity.
+Traditional algorithms push data until packets drop. BBR instead tries to operate close to the network's natural capacity.
 
 The core ideas behind BBR revolve around three mechanisms.
 
@@ -251,5 +249,3 @@ sysctl net.inet.tcp.functions_default
 ```
 
 If the output shows `bbr`, the algorithm is active.
-
-
