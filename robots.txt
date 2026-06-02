@@ -1,0 +1,14 @@
+---
+---
+
+Sitemap: {{ site.url }}/sitemap.xml
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow non-content paths
+Disallow: /assets/
+Disallow: /redirects/
+Disallow: /*.json$
+Disallow: /*.xml$
