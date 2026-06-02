@@ -14,7 +14,7 @@ timezone: Asia/Karachi
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Umair Khursid 
+title: Umair Khurshid 
 
 description: A blog about Unix Systems, infrastructure, and practical problem solving.
  
@@ -116,6 +116,9 @@ paginate: 10
 
 # The base URL of your site
 baseurl: ""
+
+plugins:
+  - jekyll-last-modified-at
 
 # ------------ The following options are not recommended to be modified ------------------
 
