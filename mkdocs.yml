@@ -37,6 +37,13 @@ plugins:
 
 extra:
   generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Umair-khurshid
+      name: GitHub
+    - icon: fontawesome/solid/mug-hot
+      link: https://www.buymeacoffee.com/umairkhurshid
+      name: Buy Me a Coffee
 
 copyright: Copyright &copy; 2026 Umair Khurshid
 
