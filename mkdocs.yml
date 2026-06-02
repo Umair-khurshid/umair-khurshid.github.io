@@ -75,7 +75,7 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Posts:
+  - Posts:  # add new posts here via ./tools/new-post.sh
       - TCP BBR Setup Guide: posts/tcp-bbr-setup-guide.md
       - Prevent Abuse with TCP Rate Limiting: posts/prevent-abuse-with-tcp-rate-limiting-using-iptables.md
   - Tags: tags.md
